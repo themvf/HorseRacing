@@ -1,10 +1,10 @@
-"""Final diagnostic check."""
+"""Diagnostic check — parse quality and field coverage."""
 import sys, io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
-from parx_engine_v4_kiro import ParxRacingEngineV4
+from horse_racing_engine import HorseRacingEngine
 
-engine = ParxRacingEngineV4()
-text = engine.extract_text_from_pdf('prx0422y.pdf')
+engine = HorseRacingEngine()
+text = engine.extract_text_from_pdf('samples/prx0422y.pdf')
 engine.parse_races(text)
 engine.diagnose_parse_quality()
 

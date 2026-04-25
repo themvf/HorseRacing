@@ -12,7 +12,8 @@ import pytest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 BASELINE_DIR = pathlib.Path(__file__).parent / "baselines"
-PDF_PATH = pathlib.Path(__file__).parent.parent / "prx0422y.pdf"
+PDF_PATH     = pathlib.Path(__file__).parent.parent / "samples" / "prx0422y.pdf"
+LRL_PDF_PATH = pathlib.Path(__file__).parent.parent / "samples" / "lrl0424u.pdf"
 REGRESSION_THRESHOLD = 0.05  # Allow up to 5% drop from baseline
 
 
@@ -24,8 +25,8 @@ def load_baseline(path: str) -> dict:
 
 def run_parser(pdf_path: str) -> dict:
     """Run the parser and return extraction results in baseline format."""
-    from parx_engine_v4_kiro import ParxRacingEngineV4
-    engine = ParxRacingEngineV4()
+    from horse_racing_engine_v4_kiro import HorseRacingEngine
+    engine = HorseRacingEngine()
     text = engine.extract_text_from_pdf(str(pdf_path))
     assert text, f"Failed to extract text from {pdf_path}"
     engine.parse_races(text)
@@ -99,7 +100,7 @@ class TestRegressionPrx0422y:
 
     @pytest.mark.parametrize("field", [
         "odds_parsed", "jockey_parsed", "trainer_parsed",
-        "speed_parsed", "life_parsed", "past_races_parsed",
+        "speed_parsed", "life_parsed", "claim_price_parsed", "past_races_parsed",
     ])
     def test_global_field_rate_no_regression(self, baseline, current, field):
         """Global field extraction rate should not drop >5% from baseline."""
@@ -228,3 +229,71 @@ class TestRegressionFormatVariations:
     def test_missing_distance_returns_zero(self, normalizer):
         """None-like input returns 0.0"""
         assert normalizer.normalize_distance("") == 0.0
+
+
+class TestRegressionLrl0424u:
+    """Regression tests for lrl0424u.pdf (Laurel Park) against stored baseline."""
+
+    @pytest.fixture(scope="class")
+    def baseline(self):
+        baseline_path = BASELINE_DIR / "lrl0424u_baseline.json"
+        if not baseline_path.exists():
+            pytest.skip(f"Baseline not found: {baseline_path}")
+        return load_baseline(str(baseline_path))
+
+    @pytest.fixture(scope="class")
+    def current(self):
+        if not LRL_PDF_PATH.exists():
+            pytest.skip(f"PDF not found: {LRL_PDF_PATH}")
+        return run_parser(LRL_PDF_PATH)
+
+    def test_race_count_unchanged(self, baseline, current):
+        assert current["total_races"] == baseline["total_races"], (
+            f"Race count changed: {current['total_races']} vs baseline {baseline['total_races']}"
+        )
+
+    def test_horse_count_unchanged(self, baseline, current):
+        assert current["total_horses"] == baseline["total_horses"], (
+            f"Horse count changed: {current['total_horses']} vs baseline {baseline['total_horses']}"
+        )
+
+    @pytest.mark.parametrize("field", [
+        "odds_parsed", "jockey_parsed", "trainer_parsed",
+        "speed_parsed", "life_parsed", "claim_price_parsed", "past_races_parsed",
+    ])
+    def test_global_field_rate_no_regression(self, baseline, current, field):
+        baseline_rate = baseline["global_field_rates"].get(field, 0.0)
+        current_rate  = current["global_field_rates"].get(field, 0.0)
+        drop = baseline_rate - current_rate
+        assert drop <= REGRESSION_THRESHOLD, (
+            f"REGRESSION: {field} dropped {drop:.1%} "
+            f"(baseline={baseline_rate:.1%}, current={current_rate:.1%})"
+        )
+
+    @pytest.mark.parametrize("race_num", ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+    def test_per_race_jockey_no_regression(self, baseline, current, race_num):
+        if race_num not in baseline.get("races", {}):
+            pytest.skip(f"Race {race_num} not in baseline")
+        if race_num not in current.get("races", {}):
+            pytest.fail(f"Race {race_num} missing from current results")
+        baseline_rate = baseline["races"][race_num]["field_rates"].get("jockey_parsed", 0.0)
+        current_rate  = current["races"][race_num]["field_rates"].get("jockey_parsed", 0.0)
+        drop = baseline_rate - current_rate
+        assert drop <= REGRESSION_THRESHOLD, (
+            f"REGRESSION Race {race_num}: jockey_parsed dropped {drop:.1%} "
+            f"(baseline={baseline_rate:.1%}, current={current_rate:.1%})"
+        )
+
+    @pytest.mark.parametrize("race_num", ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+    def test_per_race_speed_no_regression(self, baseline, current, race_num):
+        if race_num not in baseline.get("races", {}):
+            pytest.skip(f"Race {race_num} not in baseline")
+        if race_num not in current.get("races", {}):
+            pytest.fail(f"Race {race_num} missing from current results")
+        baseline_rate = baseline["races"][race_num]["field_rates"].get("speed_parsed", 0.0)
+        current_rate  = current["races"][race_num]["field_rates"].get("speed_parsed", 0.0)
+        drop = baseline_rate - current_rate
+        assert drop <= REGRESSION_THRESHOLD, (
+            f"REGRESSION Race {race_num}: speed_parsed dropped {drop:.1%} "
+            f"(baseline={baseline_rate:.1%}, current={current_rate:.1%})"
+        )

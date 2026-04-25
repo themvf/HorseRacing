@@ -82,7 +82,24 @@ class Normalizer:
             if m:
                 miles = int(m.group(1))
                 return float(miles * 8)
-            
+
+            # Pattern 2b: "Mile" text format — "1Mile", "1ˆMile" (1 1/16), "1„Mile" (1 1/8)
+            m = re.search(r'(\d+)\S{0,4}Miles?', raw, re.IGNORECASE)
+            if m:
+                whole = int(m.group(1))
+                segment = raw[:m.end()]
+                frac = 0.0
+                if 'ˆ' in segment:   # ˆ = 1/16 mile
+                    frac = 1/16
+                elif '„' in segment:  # „ = 1/8 mile
+                    frac = 1/8
+                else:
+                    for frac_char, frac_val in self.FRACTION_MAP.items():
+                        if frac_char in segment:
+                            frac = frac_val
+                            break
+                return round(whole * 8 + frac * 8, 2)
+
             # Pattern 3: Furlongs with Unicode fraction (e.g., "6½Furlongs")
             for frac_char, frac_val in self.FRACTION_MAP.items():
                 if frac_char in raw:

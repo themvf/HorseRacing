@@ -6,10 +6,10 @@ Stores results in tests/baselines/prx0422y_baseline.json
 import sys, os, json, pathlib
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from parx_engine_v4_kiro import ParxRacingEngineV4
+from horse_racing_engine_v4_kiro import HorseRacingEngine
 
 def create_baseline(pdf_path: str, output_path: str):
-    engine = ParxRacingEngineV4()
+    engine = HorseRacingEngine()
     text = engine.extract_text_from_pdf(pdf_path)
     if not text:
         print(f"[!] Failed to extract text from {pdf_path}")

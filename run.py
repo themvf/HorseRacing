@@ -1,5 +1,5 @@
 """
-Parx Racing Predictive Engine — Interactive Runner
+Horse Racing Predictive Engine — Interactive Runner
 ===================================================
 Usage:
     python run.py
@@ -22,7 +22,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='repla
 import logging
 logging.disable(logging.INFO)
 
-from parx_engine_v4_kiro import ParxRacingEngineV4
+from horse_racing_engine import HorseRacingEngine
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────
@@ -47,7 +47,7 @@ def parse_finish_order(raw: str) -> list:
     return [name.strip() for name in raw.split(',') if name.strip()]
 
 
-def print_race_summary(engine: ParxRacingEngineV4) -> None:
+def print_race_summary(engine: HorseRacingEngine) -> None:
     """Print a quick summary of all parsed races."""
     print(f"\n  {'Race':<6} {'Horses':>7}  {'Distance':<12}  {'Purse':>10}  Top Pick")
     print(f"  {'-'*60}")
@@ -66,7 +66,7 @@ def print_race_summary(engine: ParxRacingEngineV4) -> None:
 
 def main():
     print("\n" + "=" * 60)
-    print("  PARX RACING PREDICTIVE ENGINE v4.0")
+    print("  HORSE RACING PREDICTIVE ENGINE v4.0")
     print("=" * 60)
 
     # ── Step 1: Get PDF path ──────────────────────────────────────────
@@ -90,8 +90,9 @@ def main():
 
     # ── Step 2: Parse PDF ─────────────────────────────────────────────
     print(f"\nStep 2: Parsing PDF...")
-    engine = ParxRacingEngineV4()
+    engine = HorseRacingEngine()
     text = engine.extract_text_from_pdf(pdf_path)
+    print(f"[+] Track: {engine.track_name}")
 
     if not text:
         print("[!] Failed to extract text from PDF. Is it a valid race book?")
