@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "rules": {
+    "jockey_win_pct": [
+      {
+        "field": "jockey_win_pct",
+        "rule_type": "range",
+        "constraint": [0.0, 1.0],
+        "severity": "error",
+        "message": "Jockey win percentage must be between 0.0 and 1.0"
+      }
+    ],
+    "trainer_win_pct": [
+      {
+        "field": "trainer_win_pct",
+        "rule_type": "range",
+        "constraint": [0.0, 1.0],
+        "severity": "error",
+        "message": "Trainer win percentage must be between 0.0 and 1.0"
+      }
+    ],
+    "odds": [
+      {
+        "field": "odds",
+        "rule_type": "custom",
+        "constraint": "positive_number",
+        "severity": "error",
+        "message": "Odds must be a positive number"
+      }
+    ],
+    "distance": [
+      {
+        "field": "distance",
+        "rule_type": "range",
+        "constraint": [3.0, 12.0],
+        "severity": "warning",
+        "message": "Distance outside typical range (3.0-12.0 furlongs)"
+      }
+    ],
+    "best_speed": [
+      {
+        "field": "best_speed",
+        "rule_type": "range",
+        "constraint": [0, 150],
+        "severity": "error",
+        "message": "Speed figure must be between 0 and 150"
+      }
+    ],
+    "claim_price": [
+      {
+        "field": "claim_price",
+        "rule_type": "custom",
+        "constraint": "valid_claim_price",
+        "severity": "error",
+        "message": "Claim price must be 0 (non-claiming) or >= 2500"
+      }
+    ]
+  }
+}

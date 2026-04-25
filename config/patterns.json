@@ -1,0 +1,125 @@
+{
+  "version": "1.0.0",
+  "fields": {
+    "jockey_name": {
+      "name": "jockey_name",
+      "patterns": [
+        "([A-Z][A-Z,\\.\\s]+?)\\s+\\((\\d+)\\s+\\d+-\\d+-\\d+\\s+(\\d+)%\\)"
+      ],
+      "default_value": "",
+      "pre_filter": "(",
+      "exclude_keywords": ["Trnr:", "Life:", "Sire", "Dam", "JKYw", "PRX", "Trf"]
+    },
+    "trainer_name": {
+      "name": "trainer_name",
+      "patterns": [
+        "Trnr:\\s+([A-Za-z\\s\\-\\'\\.,]+?)\\s+\\((\\d+)\\s+(\\d+)-(\\d+)-(\\d+)\\s+(\\d+)%\\)"
+      ],
+      "default_value": "",
+      "pre_filter": "Trnr:",
+      "exclude_keywords": []
+    },
+    "odds": {
+      "name": "odds",
+      "patterns": [
+        "(\\d+/\\d+)\\s+[O]"
+      ],
+      "default_value": 10.0,
+      "pre_filter": null,
+      "exclude_keywords": []
+    },
+    "distance": {
+      "name": "distance",
+      "patterns": [
+        "(\\d+(?:\\.\\d+)?)\\S{0,6}Furlongs?",
+        "(\\d+)m(\\d+)yds?",
+        "(\\d+)m",
+        "(?:^|\\s)(\\d+(?:\\.\\d+)?)f\\b"
+      ],
+      "default_value": 0.0,
+      "pre_filter": null,
+      "exclude_keywords": []
+    },
+    "claim_price": {
+      "name": "claim_price",
+      "patterns": [
+        "\\$(\\d{1,3}(?:,\\d{3})+|\\d{4,6})"
+      ],
+      "default_value": 0,
+      "pre_filter": "$",
+      "exclude_keywords": []
+    },
+    "best_speed": {
+      "name": "best_speed",
+      "patterns": [
+        "Fst\\((\\d+)\\)"
+      ],
+      "default_value": 0,
+      "pre_filter": "Fst",
+      "exclude_keywords": []
+    },
+    "past_performance_spaced": {
+      "name": "past_performance_spaced",
+      "patterns": [
+        "(\\d{2,3})\\s+(\\d{2,3})/\\s*\\d{2,3}\\s+[+-]?\\d+\\s+[+-]?\\d+\\s+(\\d{2,3})"
+      ],
+      "default_value": null,
+      "pre_filter": "/",
+      "exclude_keywords": []
+    },
+    "past_performance_jammed": {
+      "name": "past_performance_jammed",
+      "patterns": [
+        "\\d{2}(\\d{2,3})/\\s*\\d{2,3}\\s+[+-]?\\d+\\s+[+-]?\\d+\\s+(\\d{2,3})"
+      ],
+      "default_value": null,
+      "pre_filter": "/",
+      "exclude_keywords": []
+    },
+    "prime_power": {
+      "name": "prime_power",
+      "patterns": [
+        "Prime Power:\\s*([\\d.]+)\\s*\\((\\d+)(?:st|nd|rd|th)\\)"
+      ],
+      "default_value": 0.0,
+      "pre_filter": "Prime Power:",
+      "exclude_keywords": []
+    },
+    "life_stats": {
+      "name": "life_stats",
+      "patterns": [
+        "Life:\\s*(\\d+)\\s+(\\d+)\\s*-?\\s*(\\d+)\\s*-?\\s*(\\d+)\\s*\\$?([\\d,]+)"
+      ],
+      "default_value": null,
+      "pre_filter": "Life:",
+      "exclude_keywords": []
+    },
+    "class_rating": {
+      "name": "class_rating",
+      "patterns": [
+        "(\\d+)\\s+Fst"
+      ],
+      "default_value": 0,
+      "pre_filter": "Fst",
+      "exclude_keywords": []
+    },
+    "sire_stats": {
+      "name": "sire_stats",
+      "patterns": [
+        "Sire Stats:\\s+AWD\\s*([\\d.]+)\\s+(\\d+)%\\s+.*Mud\\s*(\\d+)MudSts\\s*([\\d.]+)spi"
+      ],
+      "default_value": null,
+      "pre_filter": "Sire Stats:",
+      "exclude_keywords": []
+    },
+    "dam_sire_stats": {
+      "name": "dam_sire_stats",
+      "patterns": [
+        "Dam'sSire:\\s+AWD\\s*([\\d.]+)\\s+(\\d+)%.*Mud\\s*(\\d+)MudSts\\s*([\\d.]+)spi"
+      ],
+      "default_value": null,
+      "pre_filter": "Dam",
+      "exclude_keywords": []
+    }
+  }
+}

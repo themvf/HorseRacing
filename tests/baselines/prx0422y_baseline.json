@@ -1,0 +1,1244 @@
+{
+  "pdf_file": "prx0422y.pdf",
+  "total_horses": 72,
+  "total_races": 10,
+  "races": {
+    "1": {
+      "total_horses": 7,
+      "field_counts": {
+        "odds_parsed": 7,
+        "jockey_parsed": 7,
+        "trainer_parsed": 7,
+        "speed_parsed": 7,
+        "life_parsed": 7,
+        "claim_price_parsed": 7,
+        "past_races_parsed": 7
+      },
+      "field_rates": {
+        "odds_parsed": 1.0,
+        "jockey_parsed": 1.0,
+        "trainer_parsed": 1.0,
+        "speed_parsed": 1.0,
+        "life_parsed": 1.0,
+        "claim_price_parsed": 1.0,
+        "past_races_parsed": 1.0
+      },
+      "horses": [
+        {
+          "name": "Three Captains",
+          "odds": 10.0,
+          "odds_parsed": true,
+          "jockey_name": "Mychel J Sanchez",
+          "jockey_win_pct": 0.29,
+          "trainer_name": "Pattershall Mary A",
+          "trainer_win_pct": 0.17,
+          "best_speed": 104,
+          "starts": 29,
+          "claim_price": 16000,
+          "past_races_count": 9
+        },
+        {
+          "name": "Borracho",
+          "odds": 5.0,
+          "odds_parsed": true,
+          "jockey_name": "Yedsit Hazlewood",
+          "jockey_win_pct": 0.25,
+          "trainer_name": "Ness Jamie",
+          "trainer_win_pct": 0.28,
+          "best_speed": 110,
+          "starts": 68,
+          "claim_price": 16000,
+          "past_races_count": 10
+        },
+        {
+          "name": "Runandscore",
+          "odds": 3.0,
+          "odds_parsed": true,
+          "jockey_name": "Dexter Haddock",
+          "jockey_win_pct": 0.13,
+          "trainer_name": "Rodriguez Miguel A",
+          "trainer_win_pct": 0.19,
+          "best_speed": 109,
+          "starts": 31,
+          "claim_price": 16000,
+          "past_races_count": 10
+        },
+        {
+          "name": "Cold Feet",
+          "odds": 5.0,
+          "odds_parsed": true,
+          "jockey_name": "Luis D Rivera",
+          "jockey_win_pct": 0.11,
+          "trainer_name": "Ramirez Silvino",
+          "trainer_win_pct": 0.19,
+          "best_speed": 107,
+          "starts": 23,
+          "claim_price": 16000,
+          "past_races_count": 8
+        },
+        {
+          "name": "Yuletide Gallop",
+          "odds": 2.5,
+          "odds_parsed": true,
+          "jockey_name": "Paco Lopez",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Linder, Jr. Louis C",
+          "trainer_win_pct": 0.16,
+          "best_speed": 104,
+          "starts": 22,
+          "claim_price": 16000,
+          "past_races_count": 10
+        },
+        {
+          "name": "Midlaner",
+          "odds": 4.5,
+          "odds_parsed": true,
+          "jockey_name": "Andy Hernandez",
+          "jockey_win_pct": 0.18,
+          "trainer_name": "Moore Michael M",
+          "trainer_win_pct": 0.25,
+          "best_speed": 108,
+          "starts": 53,
+          "claim_price": 16000,
+          "past_races_count": 10
+        },
+        {
+          "name": "Downtownchalybrown",
+          "odds": 3.5,
+          "odds_parsed": true,
+          "jockey_name": "Jorge A Vargas",
+          "jockey_win_pct": 0.19,
+          "trainer_name": "Padilla-Preciado Ernesto",
+          "trainer_win_pct": 0.19,
+          "best_speed": 104,
+          "starts": 47,
+          "claim_price": 16000,
+          "past_races_count": 9
+        }
+      ]
+    },
+    "2": {
+      "total_horses": 7,
+      "field_counts": {
+        "odds_parsed": 7,
+        "jockey_parsed": 7,
+        "trainer_parsed": 7,
+        "speed_parsed": 7,
+        "life_parsed": 7,
+        "claim_price_parsed": 7,
+        "past_races_parsed": 7
+      },
+      "field_rates": {
+        "odds_parsed": 1.0,
+        "jockey_parsed": 1.0,
+        "trainer_parsed": 1.0,
+        "speed_parsed": 1.0,
+        "life_parsed": 1.0,
+        "claim_price_parsed": 1.0,
+        "past_races_parsed": 1.0
+      },
+      "horses": [
+        {
+          "name": "Try Harder",
+          "odds": 2.0,
+          "odds_parsed": true,
+          "jockey_name": "Jorge A Vargas",
+          "jockey_win_pct": 0.19,
+          "trainer_name": "Padilla-Preciado Ernesto",
+          "trainer_win_pct": 0.19,
+          "best_speed": 106,
+          "starts": 26,
+          "claim_price": 10000,
+          "past_races_count": 10
+        },
+        {
+          "name": "Romantic Gamble",
+          "odds": 12.0,
+          "odds_parsed": true,
+          "jockey_name": "Ajhari Williams",
+          "jockey_win_pct": 0.1,
+          "trainer_name": "Gallimore Trevor",
+          "trainer_win_pct": 0.05,
+          "best_speed": 102,
+          "starts": 44,
+          "claim_price": 10000,
+          "past_races_count": 10
+        },
+        {
+          "name": "Transcendental",
+          "odds": 4.0,
+          "odds_parsed": true,
+          "jockey_name": "Mychel J Sanchez",
+          "jockey_win_pct": 0.29,
+          "trainer_name": "Pino Michael V",
+          "trainer_win_pct": 0.35,
+          "best_speed": 111,
+          "starts": 19,
+          "claim_price": 10000,
+          "past_races_count": 10
+        },
+        {
+          "name": "Backside Buzz",
+          "odds": 3.5,
+          "odds_parsed": true,
+          "jockey_name": "Silvestre Gonzalez",
+          "jockey_win_pct": 0.08,
+          "trainer_name": "Padilla-Preciado Ernesto",
+          "trainer_win_pct": 0.19,
+          "best_speed": 105,
+          "starts": 40,
+          "claim_price": 10000,
+          "past_races_count": 9
+        },
+        {
+          "name": "Ahsad",
+          "odds": 4.5,
+          "odds_parsed": true,
+          "jockey_name": "Frankie Pennington",
+          "jockey_win_pct": 0.18,
+          "trainer_name": "Kirby John T",
+          "trainer_win_pct": 0.2,
+          "best_speed": 108,
+          "starts": 113,
+          "claim_price": 10000,
+          "past_races_count": 10
+        },
+        {
+          "name": "Fast Bob",
+          "odds": 5.0,
+          "odds_parsed": true,
+          "jockey_name": "Yedsit Hazlewood",
+          "jockey_win_pct": 0.25,
+          "trainer_name": "Abrams Jack",
+          "trainer_win_pct": 0.11,
+          "best_speed": 104,
+          "starts": 70,
+          "claim_price": 10000,
+          "past_races_count": 10
+        },
+        {
+          "name": "B B Bad",
+          "odds": 5.0,
+          "odds_parsed": true,
+          "jockey_name": "Andy Hernandez",
+          "jockey_win_pct": 0.18,
+          "trainer_name": "Padilla Hugo O",
+          "trainer_win_pct": 0.26,
+          "best_speed": 107,
+          "starts": 63,
+          "claim_price": 10000,
+          "past_races_count": 10
+        }
+      ]
+    },
+    "3": {
+      "total_horses": 6,
+      "field_counts": {
+        "odds_parsed": 6,
+        "jockey_parsed": 6,
+        "trainer_parsed": 4,
+        "speed_parsed": 6,
+        "life_parsed": 6,
+        "claim_price_parsed": 6,
+        "past_races_parsed": 6
+      },
+      "field_rates": {
+        "odds_parsed": 1.0,
+        "jockey_parsed": 1.0,
+        "trainer_parsed": 0.667,
+        "speed_parsed": 1.0,
+        "life_parsed": 1.0,
+        "claim_price_parsed": 1.0,
+        "past_races_parsed": 1.0
+      },
+      "horses": [
+        {
+          "name": "Astrid",
+          "odds": 8.0,
+          "odds_parsed": true,
+          "jockey_name": "Dalila A Rivera",
+          "jockey_win_pct": 0.24,
+          "trainer_name": "Bedard Alan",
+          "trainer_win_pct": 0.0,
+          "best_speed": 99,
+          "starts": 9,
+          "claim_price": 12500,
+          "past_races_count": 9
+        },
+        {
+          "name": "Keystormrising",
+          "odds": 15.0,
+          "odds_parsed": true,
+          "jockey_name": "Luis M Ocasio",
+          "jockey_win_pct": 0.1,
+          "trainer_name": "Bedard Alan",
+          "trainer_win_pct": 0.0,
+          "best_speed": 95,
+          "starts": 15,
+          "claim_price": 12500,
+          "past_races_count": 10
+        },
+        {
+          "name": "Nezy's Girl",
+          "odds": 6.0,
+          "odds_parsed": true,
+          "jockey_name": "Kendry Rivera",
+          "jockey_win_pct": 0.07,
+          "trainer_name": "King Clarence B",
+          "trainer_win_pct": 0.14,
+          "best_speed": 100,
+          "starts": 13,
+          "claim_price": 12500,
+          "past_races_count": 10
+        },
+        {
+          "name": "Pittore d'Oro",
+          "odds": 2.5,
+          "odds_parsed": true,
+          "jockey_name": "Jorge A Vargas",
+          "jockey_win_pct": 0.19,
+          "trainer_name": "Padilla-Preciado Ernesto",
+          "trainer_win_pct": 0.19,
+          "best_speed": 105,
+          "starts": 24,
+          "claim_price": 12500,
+          "past_races_count": 10
+        },
+        {
+          "name": "Candothis",
+          "odds": 1.8,
+          "odds_parsed": true,
+          "jockey_name": "Mychel J Sanchez",
+          "jockey_win_pct": 0.29,
+          "trainer_name": "Lake Scott A",
+          "trainer_win_pct": 0.12,
+          "best_speed": 106,
+          "starts": 9,
+          "claim_price": 12500,
+          "past_races_count": 9
+        },
+        {
+          "name": "Luminous Secret",
+          "odds": 2.0,
+          "odds_parsed": true,
+          "jockey_name": "Yedsit Hazlewood",
+          "jockey_win_pct": 0.25,
+          "trainer_name": "Ness Jamie",
+          "trainer_win_pct": 0.28,
+          "best_speed": 104,
+          "starts": 11,
+          "claim_price": 12500,
+          "past_races_count": 10
+        }
+      ]
+    },
+    "4": {
+      "total_horses": 6,
+      "field_counts": {
+        "odds_parsed": 6,
+        "jockey_parsed": 6,
+        "trainer_parsed": 6,
+        "speed_parsed": 6,
+        "life_parsed": 6,
+        "claim_price_parsed": 6,
+        "past_races_parsed": 6
+      },
+      "field_rates": {
+        "odds_parsed": 1.0,
+        "jockey_parsed": 1.0,
+        "trainer_parsed": 1.0,
+        "speed_parsed": 1.0,
+        "life_parsed": 1.0,
+        "claim_price_parsed": 1.0,
+        "past_races_parsed": 1.0
+      },
+      "horses": [
+        {
+          "name": "Tush Push",
+          "odds": 3.5,
+          "odds_parsed": true,
+          "jockey_name": "Mychel J Sanchez",
+          "jockey_win_pct": 0.29,
+          "trainer_name": "Arce Josue",
+          "trainer_win_pct": 0.13,
+          "best_speed": 102,
+          "starts": 6,
+          "claim_price": 12500,
+          "past_races_count": 5
+        },
+        {
+          "name": "Rosie Warrior",
+          "odds": 3.0,
+          "odds_parsed": true,
+          "jockey_name": "Dalila A Rivera",
+          "jockey_win_pct": 0.24,
+          "trainer_name": "Padilla-Preciado Ernesto",
+          "trainer_win_pct": 0.19,
+          "best_speed": 104,
+          "starts": 6,
+          "claim_price": 12500,
+          "past_races_count": 6
+        },
+        {
+          "name": "Sugar Princess",
+          "odds": 8.0,
+          "odds_parsed": true,
+          "jockey_name": "Yan Rodriguez",
+          "jockey_win_pct": 0.12,
+          "trainer_name": "Diaz Jorge",
+          "trainer_win_pct": 0.08,
+          "best_speed": 105,
+          "starts": 13,
+          "claim_price": 12500,
+          "past_races_count": 8
+        },
+        {
+          "name": "Cathedral Aisle",
+          "odds": 1.6,
+          "odds_parsed": true,
+          "jockey_name": "Yedsit Hazlewood",
+          "jockey_win_pct": 0.25,
+          "trainer_name": "Dutrow, Jr. Richard E",
+          "trainer_win_pct": 0.33,
+          "best_speed": 105,
+          "starts": 4,
+          "claim_price": 12500,
+          "past_races_count": 4
+        },
+        {
+          "name": "Mariah's Big Girl",
+          "odds": 8.0,
+          "odds_parsed": true,
+          "jockey_name": "Ajhari Williams",
+          "jockey_win_pct": 0.1,
+          "trainer_name": "Gallimore Trevor",
+          "trainer_win_pct": 0.05,
+          "best_speed": 99,
+          "starts": 9,
+          "claim_price": 12500,
+          "past_races_count": 6
+        },
+        {
+          "name": "Turn On Twiss",
+          "odds": 10.0,
+          "odds_parsed": true,
+          "jockey_name": "Kendry Rivera",
+          "jockey_win_pct": 0.07,
+          "trainer_name": "Abrams Jack",
+          "trainer_win_pct": 0.11,
+          "best_speed": 99,
+          "starts": 5,
+          "claim_price": 12500,
+          "past_races_count": 5
+        }
+      ]
+    },
+    "5": {
+      "total_horses": 6,
+      "field_counts": {
+        "odds_parsed": 6,
+        "jockey_parsed": 6,
+        "trainer_parsed": 6,
+        "speed_parsed": 6,
+        "life_parsed": 6,
+        "claim_price_parsed": 6,
+        "past_races_parsed": 6
+      },
+      "field_rates": {
+        "odds_parsed": 1.0,
+        "jockey_parsed": 1.0,
+        "trainer_parsed": 1.0,
+        "speed_parsed": 1.0,
+        "life_parsed": 1.0,
+        "claim_price_parsed": 1.0,
+        "past_races_parsed": 1.0
+      },
+      "horses": [
+        {
+          "name": "Silent Mode",
+          "odds": 3.5,
+          "odds_parsed": true,
+          "jockey_name": "Eliseo Ruiz",
+          "jockey_win_pct": 0.25,
+          "trainer_name": "Abrams Ronald B",
+          "trainer_win_pct": 0.17,
+          "best_speed": 109,
+          "starts": 33,
+          "claim_price": 166130,
+          "past_races_count": 10
+        },
+        {
+          "name": "Missouri River",
+          "odds": 3.0,
+          "odds_parsed": true,
+          "jockey_name": "Paco Lopez",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Pino Michael V",
+          "trainer_win_pct": 0.35,
+          "best_speed": 114,
+          "starts": 22,
+          "claim_price": 133860,
+          "past_races_count": 10
+        },
+        {
+          "name": "Epic Luck",
+          "odds": 12.0,
+          "odds_parsed": true,
+          "jockey_name": "Frankie Pennington",
+          "jockey_win_pct": 0.18,
+          "trainer_name": "Wyner Harold",
+          "trainer_win_pct": 0.13,
+          "best_speed": 97,
+          "starts": 55,
+          "claim_price": 318519,
+          "past_races_count": 10
+        },
+        {
+          "name": "Sunday Spirit",
+          "odds": 4.5,
+          "odds_parsed": true,
+          "jockey_name": "Andy Hernandez",
+          "jockey_win_pct": 0.18,
+          "trainer_name": "Solis Jacinto",
+          "trainer_win_pct": 0.09,
+          "best_speed": 101,
+          "starts": 26,
+          "claim_price": 209447,
+          "past_races_count": 10
+        },
+        {
+          "name": "Elusive Target",
+          "odds": 4.5,
+          "odds_parsed": true,
+          "jockey_name": "Jean Aguilar",
+          "jockey_win_pct": 0.16,
+          "trainer_name": "Penaloza Miguel",
+          "trainer_win_pct": 0.22,
+          "best_speed": 114,
+          "starts": 38,
+          "claim_price": 373249,
+          "past_races_count": 10
+        },
+        {
+          "name": "Chachaching",
+          "odds": 2.5,
+          "odds_parsed": true,
+          "jockey_name": "Francisco Martinez",
+          "jockey_win_pct": 0.12,
+          "trainer_name": "Mosco Robert",
+          "trainer_win_pct": 0.11,
+          "best_speed": 113,
+          "starts": 30,
+          "claim_price": 174674,
+          "past_races_count": 10
+        }
+      ]
+    },
+    "6": {
+      "total_horses": 7,
+      "field_counts": {
+        "odds_parsed": 7,
+        "jockey_parsed": 7,
+        "trainer_parsed": 7,
+        "speed_parsed": 7,
+        "life_parsed": 7,
+        "claim_price_parsed": 7,
+        "past_races_parsed": 7
+      },
+      "field_rates": {
+        "odds_parsed": 1.0,
+        "jockey_parsed": 1.0,
+        "trainer_parsed": 1.0,
+        "speed_parsed": 1.0,
+        "life_parsed": 1.0,
+        "claim_price_parsed": 1.0,
+        "past_races_parsed": 1.0
+      },
+      "horses": [
+        {
+          "name": "Ambitiously Placed",
+          "odds": 2.5,
+          "odds_parsed": true,
+          "jockey_name": "Mychel J Sanchez",
+          "jockey_win_pct": 0.29,
+          "trainer_name": "Pino Michael V",
+          "trainer_win_pct": 0.35,
+          "best_speed": 101,
+          "starts": 73,
+          "claim_price": 7500,
+          "past_races_count": 10
+        },
+        {
+          "name": "Moor Strength",
+          "odds": 5.0,
+          "odds_parsed": true,
+          "jockey_name": "Francisco Martinez",
+          "jockey_win_pct": 0.12,
+          "trainer_name": "Badillo-Casado Jonathaniel",
+          "trainer_win_pct": 0.3,
+          "best_speed": 101,
+          "starts": 39,
+          "claim_price": 7500,
+          "past_races_count": 9
+        },
+        {
+          "name": "Island Dream Girl",
+          "odds": 5.0,
+          "odds_parsed": true,
+          "jockey_name": "Dexter Haddock",
+          "jockey_win_pct": 0.13,
+          "trainer_name": "King Clarence B",
+          "trainer_win_pct": 0.14,
+          "best_speed": 104,
+          "starts": 12,
+          "claim_price": 7500,
+          "past_races_count": 10
+        },
+        {
+          "name": "Society Ball",
+          "odds": 6.0,
+          "odds_parsed": true,
+          "jockey_name": "Yedsit Hazlewood",
+          "jockey_win_pct": 0.25,
+          "trainer_name": "Ness Jamie",
+          "trainer_win_pct": 0.28,
+          "best_speed": 105,
+          "starts": 23,
+          "claim_price": 7500,
+          "past_races_count": 10
+        },
+        {
+          "name": "Popover Gal",
+          "odds": 3.5,
+          "odds_parsed": true,
+          "jockey_name": "Dalila A Rivera",
+          "jockey_win_pct": 0.24,
+          "trainer_name": "Velazquez Alfredo",
+          "trainer_win_pct": 0.29,
+          "best_speed": 105,
+          "starts": 23,
+          "claim_price": 7500,
+          "past_races_count": 10
+        },
+        {
+          "name": "Shudabeenacowgirl",
+          "odds": 12.0,
+          "odds_parsed": true,
+          "jockey_name": "Noel Herman",
+          "jockey_win_pct": 0.07,
+          "trainer_name": "Gallimore Trevor",
+          "trainer_win_pct": 0.05,
+          "best_speed": 100,
+          "starts": 32,
+          "claim_price": 7500,
+          "past_races_count": 10
+        },
+        {
+          "name": "Rolls Royce Joyce",
+          "odds": 4.5,
+          "odds_parsed": true,
+          "jockey_name": "Paco Lopez",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Arce Josue",
+          "trainer_win_pct": 0.13,
+          "best_speed": 102,
+          "starts": 70,
+          "claim_price": 7500,
+          "past_races_count": 10
+        }
+      ]
+    },
+    "7": {
+      "total_horses": 9,
+      "field_counts": {
+        "odds_parsed": 9,
+        "jockey_parsed": 9,
+        "trainer_parsed": 8,
+        "speed_parsed": 9,
+        "life_parsed": 9,
+        "claim_price_parsed": 9,
+        "past_races_parsed": 9
+      },
+      "field_rates": {
+        "odds_parsed": 1.0,
+        "jockey_parsed": 1.0,
+        "trainer_parsed": 0.889,
+        "speed_parsed": 1.0,
+        "life_parsed": 1.0,
+        "claim_price_parsed": 1.0,
+        "past_races_parsed": 1.0
+      },
+      "horses": [
+        {
+          "name": "Sirani",
+          "odds": 15.0,
+          "odds_parsed": true,
+          "jockey_name": "Luis M Ocasio",
+          "jockey_win_pct": 0.1,
+          "trainer_name": "Mercedes Pedro",
+          "trainer_win_pct": 0.0,
+          "best_speed": 99,
+          "starts": 24,
+          "claim_price": 5000,
+          "past_races_count": 9
+        },
+        {
+          "name": "Five Star Fran",
+          "odds": 20.0,
+          "odds_parsed": true,
+          "jockey_name": "Luis Avila",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Tapsas Ilias",
+          "trainer_win_pct": 0.09,
+          "best_speed": 100,
+          "starts": 48,
+          "claim_price": 5000,
+          "past_races_count": 9
+        },
+        {
+          "name": "Peak of Chic",
+          "odds": 2.0,
+          "odds_parsed": true,
+          "jockey_name": "Andy Hernandez",
+          "jockey_win_pct": 0.18,
+          "trainer_name": "Moore Michael M",
+          "trainer_win_pct": 0.25,
+          "best_speed": 103,
+          "starts": 42,
+          "claim_price": 5000,
+          "past_races_count": 10
+        },
+        {
+          "name": "Solemn Oath",
+          "odds": 12.0,
+          "odds_parsed": true,
+          "jockey_name": "Jean Aguilar",
+          "jockey_win_pct": 0.16,
+          "trainer_name": "Rosado Roberto J",
+          "trainer_win_pct": 0.14,
+          "best_speed": 102,
+          "starts": 70,
+          "claim_price": 5000,
+          "past_races_count": 9
+        },
+        {
+          "name": "Sweet Mischief",
+          "odds": 20.0,
+          "odds_parsed": true,
+          "jockey_name": "Noel Herman",
+          "jockey_win_pct": 0.07,
+          "trainer_name": "Tapsas Ilias",
+          "trainer_win_pct": 0.09,
+          "best_speed": 100,
+          "starts": 32,
+          "claim_price": 5000,
+          "past_races_count": 6
+        },
+        {
+          "name": "Charm of the Song",
+          "odds": 15.0,
+          "odds_parsed": true,
+          "jockey_name": "Dexter Haddock",
+          "jockey_win_pct": 0.13,
+          "trainer_name": "Solis Jacinto",
+          "trainer_win_pct": 0.09,
+          "best_speed": 105,
+          "starts": 26,
+          "claim_price": 5000,
+          "past_races_count": 9
+        },
+        {
+          "name": "Fast Motion",
+          "odds": 8.0,
+          "odds_parsed": true,
+          "jockey_name": "Silvestre Gonzalez",
+          "jockey_win_pct": 0.08,
+          "trainer_name": "Nicholson, Jr. James E",
+          "trainer_win_pct": 0.05,
+          "best_speed": 105,
+          "starts": 27,
+          "claim_price": 5000,
+          "past_races_count": 9
+        },
+        {
+          "name": "Queen Wiggy",
+          "odds": 4.5,
+          "odds_parsed": true,
+          "jockey_name": "Dalila A Rivera",
+          "jockey_win_pct": 0.24,
+          "trainer_name": "Soto- Martinez Elliott",
+          "trainer_win_pct": 0.11,
+          "best_speed": 101,
+          "starts": 38,
+          "claim_price": 5000,
+          "past_races_count": 10
+        },
+        {
+          "name": "Dakota Springs",
+          "odds": 3.0,
+          "odds_parsed": true,
+          "jockey_name": "Jorge A Vargas",
+          "jockey_win_pct": 0.19,
+          "trainer_name": "Padilla Esteban",
+          "trainer_win_pct": 0.24,
+          "best_speed": 101,
+          "starts": 24,
+          "claim_price": 5000,
+          "past_races_count": 10
+        }
+      ]
+    },
+    "8": {
+      "total_horses": 7,
+      "field_counts": {
+        "odds_parsed": 7,
+        "jockey_parsed": 7,
+        "trainer_parsed": 6,
+        "speed_parsed": 7,
+        "life_parsed": 7,
+        "claim_price_parsed": 7,
+        "past_races_parsed": 7
+      },
+      "field_rates": {
+        "odds_parsed": 1.0,
+        "jockey_parsed": 1.0,
+        "trainer_parsed": 0.857,
+        "speed_parsed": 1.0,
+        "life_parsed": 1.0,
+        "claim_price_parsed": 1.0,
+        "past_races_parsed": 1.0
+      },
+      "horses": [
+        {
+          "name": "Shane's Wonder",
+          "odds": 1.2,
+          "odds_parsed": true,
+          "jockey_name": "Eliseo Ruiz",
+          "jockey_win_pct": 0.25,
+          "trainer_name": "Velazquez Alfredo",
+          "trainer_win_pct": 0.29,
+          "best_speed": 105,
+          "starts": 2,
+          "claim_price": 66000,
+          "past_races_count": 2
+        },
+        {
+          "name": "Connor's Crew",
+          "odds": 8.0,
+          "odds_parsed": true,
+          "jockey_name": "Paco Lopez",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Reid, Jr. Robert E",
+          "trainer_win_pct": 0.1,
+          "best_speed": 101,
+          "starts": 3,
+          "claim_price": 48800,
+          "past_races_count": 3
+        },
+        {
+          "name": "Presenceisapresent",
+          "odds": 4.0,
+          "odds_parsed": true,
+          "jockey_name": "Yedsit Hazlewood",
+          "jockey_win_pct": 0.25,
+          "trainer_name": "Guerrero Juan C",
+          "trainer_win_pct": 0.19,
+          "best_speed": 101,
+          "starts": 3,
+          "claim_price": 98850,
+          "past_races_count": 3
+        },
+        {
+          "name": "Capos Sugar Kane",
+          "odds": 8.0,
+          "odds_parsed": true,
+          "jockey_name": "Inoel Beato",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "McClellan Erin C",
+          "trainer_win_pct": 0.17,
+          "best_speed": 77,
+          "starts": 8,
+          "claim_price": 49485,
+          "past_races_count": 7
+        },
+        {
+          "name": "Eake",
+          "odds": 8.0,
+          "odds_parsed": true,
+          "jockey_name": "Rider No",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Preciado Guadalupe",
+          "trainer_win_pct": 0.19,
+          "best_speed": 100,
+          "starts": 4,
+          "claim_price": 36235,
+          "past_races_count": 4
+        },
+        {
+          "name": "Gold in My Hands",
+          "odds": 5.0,
+          "odds_parsed": true,
+          "jockey_name": "Mychel J Sanchez",
+          "jockey_win_pct": 0.29,
+          "trainer_name": "Padilla Hugo O",
+          "trainer_win_pct": 0.26,
+          "best_speed": 101,
+          "starts": 5,
+          "claim_price": 67100,
+          "past_races_count": 5
+        },
+        {
+          "name": "The Beast Master",
+          "odds": 20.0,
+          "odds_parsed": true,
+          "jockey_name": "David Cora",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Houghton T. Bernard",
+          "trainer_win_pct": 0.0,
+          "best_speed": 102,
+          "starts": 1,
+          "claim_price": 2475,
+          "past_races_count": 1
+        }
+      ]
+    },
+    "9": {
+      "total_horses": 8,
+      "field_counts": {
+        "odds_parsed": 8,
+        "jockey_parsed": 8,
+        "trainer_parsed": 8,
+        "speed_parsed": 8,
+        "life_parsed": 8,
+        "claim_price_parsed": 8,
+        "past_races_parsed": 8
+      },
+      "field_rates": {
+        "odds_parsed": 1.0,
+        "jockey_parsed": 1.0,
+        "trainer_parsed": 1.0,
+        "speed_parsed": 1.0,
+        "life_parsed": 1.0,
+        "claim_price_parsed": 1.0,
+        "past_races_parsed": 1.0
+      },
+      "horses": [
+        {
+          "name": "Disco Ebo",
+          "odds": 4.0,
+          "odds_parsed": true,
+          "jockey_name": "Frankie Pennington",
+          "jockey_win_pct": 0.18,
+          "trainer_name": "Reid, Jr. Robert E",
+          "trainer_win_pct": 0.1,
+          "best_speed": 102,
+          "starts": 37,
+          "claim_price": 863744,
+          "past_races_count": 9
+        },
+        {
+          "name": "Avatude",
+          "odds": 20.0,
+          "odds_parsed": true,
+          "jockey_name": "Andy Hernandez",
+          "jockey_win_pct": 0.18,
+          "trainer_name": "Padilla-Preciado Ernesto",
+          "trainer_win_pct": 0.19,
+          "best_speed": 103,
+          "starts": 2,
+          "claim_price": 49700,
+          "past_races_count": 2
+        },
+        {
+          "name": "Carmelina",
+          "odds": 3.0,
+          "odds_parsed": true,
+          "jockey_name": "Paco Lopez",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Reid, Jr. Robert E",
+          "trainer_win_pct": 0.1,
+          "best_speed": 105,
+          "starts": 21,
+          "claim_price": 510860,
+          "past_races_count": 10
+        },
+        {
+          "name": "Carousel Queen",
+          "odds": 12.0,
+          "odds_parsed": true,
+          "jockey_name": "Rider No",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Lake Scott A",
+          "trainer_win_pct": 0.12,
+          "best_speed": 102,
+          "starts": 21,
+          "claim_price": 229125,
+          "past_races_count": 10
+        },
+        {
+          "name": "Bailout Billy",
+          "odds": 10.0,
+          "odds_parsed": true,
+          "jockey_name": "Dexter Haddock",
+          "jockey_win_pct": 0.13,
+          "trainer_name": "Guerrero J. Guadalupe",
+          "trainer_win_pct": 0.08,
+          "best_speed": 99,
+          "starts": 14,
+          "claim_price": 145423,
+          "past_races_count": 10
+        },
+        {
+          "name": "Kappa Kappa",
+          "odds": 3.5,
+          "odds_parsed": true,
+          "jockey_name": "Rider No",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Reid, Jr. Robert E",
+          "trainer_win_pct": 0.1,
+          "best_speed": 110,
+          "starts": 5,
+          "claim_price": 281375,
+          "past_races_count": 5
+        },
+        {
+          "name": "Confirmed Star",
+          "odds": 6.0,
+          "odds_parsed": true,
+          "jockey_name": "Eliseo Ruiz",
+          "jockey_win_pct": 0.25,
+          "trainer_name": "Moore Michael M",
+          "trainer_win_pct": 0.25,
+          "best_speed": 101,
+          "starts": 27,
+          "claim_price": 417246,
+          "past_races_count": 10
+        },
+        {
+          "name": "Pachelbel",
+          "odds": 5.0,
+          "odds_parsed": true,
+          "jockey_name": "Jorge A Vargas",
+          "jockey_win_pct": 0.19,
+          "trainer_name": "Moore Michael M",
+          "trainer_win_pct": 0.25,
+          "best_speed": 98,
+          "starts": 47,
+          "claim_price": 603140,
+          "past_races_count": 10
+        }
+      ]
+    },
+    "10": {
+      "total_horses": 9,
+      "field_counts": {
+        "odds_parsed": 9,
+        "jockey_parsed": 9,
+        "trainer_parsed": 7,
+        "speed_parsed": 9,
+        "life_parsed": 9,
+        "claim_price_parsed": 9,
+        "past_races_parsed": 9
+      },
+      "field_rates": {
+        "odds_parsed": 1.0,
+        "jockey_parsed": 1.0,
+        "trainer_parsed": 0.778,
+        "speed_parsed": 1.0,
+        "life_parsed": 1.0,
+        "claim_price_parsed": 1.0,
+        "past_races_parsed": 1.0
+      },
+      "horses": [
+        {
+          "name": "Ninetyprcentmaddie",
+          "odds": 6.0,
+          "odds_parsed": true,
+          "jockey_name": "Paco Lopez",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Reid, Jr. Robert E",
+          "trainer_win_pct": 0.1,
+          "best_speed": 99,
+          "starts": 31,
+          "claim_price": 656850,
+          "past_races_count": 10
+        },
+        {
+          "name": "Twisted Ride",
+          "odds": 4.0,
+          "odds_parsed": true,
+          "jockey_name": "Andy Hernandez",
+          "jockey_win_pct": 0.18,
+          "trainer_name": "Moore Michael M",
+          "trainer_win_pct": 0.25,
+          "best_speed": 104,
+          "starts": 41,
+          "claim_price": 842158,
+          "past_races_count": 10
+        },
+        {
+          "name": "Insurmountable",
+          "odds": 5.0,
+          "odds_parsed": true,
+          "jockey_name": "Yan Rodriguez",
+          "jockey_win_pct": 0.12,
+          "trainer_name": "Englehart Jeremiah C",
+          "trainer_win_pct": 1.0,
+          "best_speed": 109,
+          "starts": 14,
+          "claim_price": 147035,
+          "past_races_count": 10
+        },
+        {
+          "name": "Big Boys Answer",
+          "odds": 15.0,
+          "odds_parsed": true,
+          "jockey_name": "Jean Aguilar",
+          "jockey_win_pct": 0.16,
+          "trainer_name": "Crowell Susan L",
+          "trainer_win_pct": 0.0,
+          "best_speed": 104,
+          "starts": 26,
+          "claim_price": 305768,
+          "past_races_count": 10
+        },
+        {
+          "name": "Factor U and Me In",
+          "odds": 10.0,
+          "odds_parsed": true,
+          "jockey_name": "Abner Adorno",
+          "jockey_win_pct": 0.09,
+          "trainer_name": "Padilla Hugo O",
+          "trainer_win_pct": 0.26,
+          "best_speed": 104,
+          "starts": 31,
+          "claim_price": 285794,
+          "past_races_count": 9
+        },
+        {
+          "name": "Crab Daddy",
+          "odds": 4.5,
+          "odds_parsed": true,
+          "jockey_name": "Jose E Vargas",
+          "jockey_win_pct": 0.2,
+          "trainer_name": "Albert Linda L",
+          "trainer_win_pct": 0.0,
+          "best_speed": 104,
+          "starts": 19,
+          "claim_price": 255420,
+          "past_races_count": 10
+        },
+        {
+          "name": "Gordian Knot",
+          "odds": 3.5,
+          "odds_parsed": true,
+          "jockey_name": "Mychel J Sanchez",
+          "jockey_win_pct": 0.29,
+          "trainer_name": "Ness Jamie",
+          "trainer_win_pct": 0.28,
+          "best_speed": 104,
+          "starts": 26,
+          "claim_price": 633455,
+          "past_races_count": 10
+        },
+        {
+          "name": "Fore Harp",
+          "odds": 12.0,
+          "odds_parsed": true,
+          "jockey_name": "Rider No",
+          "jockey_win_pct": 0.0,
+          "trainer_name": "Reid, Jr. Robert E",
+          "trainer_win_pct": 0.1,
+          "best_speed": 102,
+          "starts": 39,
+          "claim_price": 505196,
+          "past_races_count": 8
+        },
+        {
+          "name": "Kohler's",
+          "odds": 6.0,
+          "odds_parsed": true,
+          "jockey_name": "Frankie Pennington",
+          "jockey_win_pct": 0.18,
+          "trainer_name": "Servis John C",
+          "trainer_win_pct": 0.04,
+          "best_speed": 103,
+          "starts": 14,
+          "claim_price": 276560,
+          "past_races_count": 10
+        }
+      ]
+    }
+  },
+  "global_field_rates": {
+    "odds_parsed": 1.0,
+    "jockey_parsed": 1.0,
+    "trainer_parsed": 0.917,
+    "speed_parsed": 1.0,
+    "life_parsed": 1.0,
+    "claim_price_parsed": 1.0,
+    "past_races_parsed": 1.0
+  },
+  "race_info": {
+    "1": {
+      "distance": "6Furlongs",
+      "distance_f": 6.0,
+      "claim_price": 16000,
+      "purse": 28000
+    },
+    "2": {
+      "distance": "6\u00bdFurlongs",
+      "distance_f": 6.0,
+      "claim_price": 10000,
+      "purse": 26000
+    },
+    "3": {
+      "distance": "1m70yds",
+      "distance_f": 8.32,
+      "claim_price": 12500,
+      "purse": 23000
+    },
+    "4": {
+      "distance": "6Furlongs",
+      "distance_f": 6.0,
+      "claim_price": 12500,
+      "purse": 23000
+    },
+    "5": {
+      "distance": "1m70yds",
+      "distance_f": 8.32,
+      "claim_price": 20000,
+      "purse": 30000
+    },
+    "6": {
+      "distance": "6\u00bdFurlongs",
+      "distance_f": 6.0,
+      "claim_price": 7500,
+      "purse": 24000
+    },
+    "7": {
+      "distance": "6Furlongs",
+      "distance_f": 6.0,
+      "claim_price": 5000,
+      "purse": 18000
+    },
+    "8": {
+      "distance": "6Furlongs",
+      "distance_f": 6.0,
+      "claim_price": 0,
+      "purse": 75000
+    },
+    "9": {
+      "distance": "6Furlongs",
+      "distance_f": 6.0,
+      "claim_price": 0,
+      "purse": 100000
+    },
+    "10": {
+      "distance": "6Furlongs",
+      "distance_f": 6.0,
+      "claim_price": 40000,
+      "purse": 100000
+    }
+  }
+}
