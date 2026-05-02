@@ -360,10 +360,11 @@ class ReportingMixin:
                         delta = f"<span class='delta worse'>▼ {diff} worse</span>"
                     actual_cell = f"<td>{fin_badge}</td><td>{delta}</td>"
 
+                pp_num = int(r['PostPos']) if r['PostPos'] > 0 else "?"
                 rows.append(
                     f"<tr>"
                     f"<td><span class='medal'>{medal}</span></td>"
-                    f"<td class='horse-name'>{r['Horse']}</td>"
+                    f"<td class='horse-name'><span class='pp-num'>#{pp_num}</span> {r['Horse']}</td>"
                     f"<td>{odds}</td>"
                     f"{pp_rank_cell}"
                     f"<td>{r['Composite_Score']:.3f}</td>"
@@ -412,10 +413,12 @@ class ReportingMixin:
                     "</table>"
                 )
 
+                pp_num = int(r['PostPos']) if r['PostPos'] > 0 else "?"
                 cards.append(
                     f"<details class='horse-card'>"
                     f"<summary style='border-left:4px solid {color}'>"
                     f"  <span class='medal'>{medal}</span>"
+                    f"  <span class='pp-num'>#{pp_num}</span>"
                     f"  <span class='horse-name'>{r['Horse']}</span>"
                     f"  <span class='odds-badge'>{odds}</span>"
                     f"  <span class='score-badge'>Score: {r['Composite_Score']:.3f}</span>"
@@ -750,6 +753,9 @@ class ReportingMixin:
   .summary-table td {{ padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }}
   .summary-table tr:hover td {{ background: var(--surface2); }}
   .horse-name {{ font-weight: 600; color: var(--text); }}
+  .pp-num     {{ display: inline-block; background: var(--surface2); border: 1px solid var(--border);
+                 border-radius: 4px; padding: 1px 6px; font-size: 0.72rem;
+                 color: var(--muted); margin-right: 6px; font-weight: 700; }}
   .analysis   {{ color: var(--muted); font-size: 0.8rem; max-width: 260px; }}
   .medal      {{ font-size: 1.1rem; }}
 

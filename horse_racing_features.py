@@ -211,6 +211,7 @@ class FeaturesMixin:
 
             f = {
                 'Horse':          horse.name,
+                'PostPos':        horse.post_position,
                 'PrimePower':     horse.prime_power,
                 'PP_Rank':        horse.pp_rank,
                 'ML_Odds':        horse.odds,

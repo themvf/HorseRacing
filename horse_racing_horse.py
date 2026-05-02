@@ -14,6 +14,7 @@ class Horse:
         # comparing model output against the 10.0 fallback.
         self.odds_parsed = False
 
+        self.post_position = 0
         self.prime_power = 0.0
         self.pp_rank = 0
         self.style = "P"

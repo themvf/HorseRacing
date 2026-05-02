@@ -243,9 +243,10 @@ class ParserMixin:
         matches = list(re.finditer(horse_pattern, text))
 
         for idx, match in enumerate(matches):
+            post_pos   = int(match.group(1))
             horse_name = match.group(2).strip()
-            style_str = match.group(3)
-            style_num = match.group(4)
+            style_str  = match.group(3)
+            style_num  = match.group(4)
 
             start_pos = match.start()
             end_pos = matches[idx + 1].start() if idx + 1 < len(matches) else len(text)
@@ -253,6 +254,7 @@ class ParserMixin:
 
             horse = self._parse_horse_block(block, horse_name, style_str, style_num)
             if horse and horse.name:
+                horse.post_position = post_pos
                 horses.append(horse)
 
         return horses
