@@ -149,13 +149,32 @@ class HorseRacingEngine(ParserMixin, FeaturesMixin, ReportingMixin):
 
     def _apply_meet_stats(self):
         """
-        Replace jockey/trainer win% on every parsed horse with current meet
-        figures from meet_stats.json.  Falls back to the PDF-parsed value when
-        the name is not found in the stats file.
+        1. Remove scratched horses from each race.
+        2. Replace jockey/trainer win% with current meet figures from meet_stats.json.
+        Falls back to the PDF-parsed value when the name is not found.
         """
         if not self.meet_stats:
             return
 
+        # ── Scratches ────────────────────────────────────────────────────────
+        scratches = self.meet_stats.get('scratches', {})
+        total_scratched = 0
+        for race_num, names in scratches.items():
+            if race_num not in self.all_races:
+                continue
+            norm_scratches = {self._normalize_name(n) for n in names}
+            before = len(self.all_races[race_num])
+            self.all_races[race_num] = [
+                h for h in self.all_races[race_num]
+                if self._normalize_name(h.name) not in norm_scratches
+            ]
+            removed = before - len(self.all_races[race_num])
+            if removed:
+                print(f"[+] Race {race_num}: {removed} scratch(es) removed "
+                      f"({', '.join(names)})")
+                total_scratched += removed
+
+        # ── Jockey / trainer win % ────────────────────────────────────────────
         jockey_lookup = {
             self._norm_person(name): data
             for name, data in self.meet_stats.get('jockeys', {}).items()
