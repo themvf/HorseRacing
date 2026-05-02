@@ -60,6 +60,13 @@ def test_distance_normalization_decimal():
     print("✓ Test passed: 6.5f → 6.5")
 
 
+def test_distance_normalization_stray_leading_number():
+    """Test: Noisy PDF extraction: 1 7 Furlongs → 7.0"""
+    normalizer = Normalizer()
+    result = normalizer.normalize_distance("1 7 Furlongs")
+    assert result == 7.0, f"Expected 7.0, got {result}"
+
+
 def test_distance_normalization_invalid():
     """Test: Invalid distance → 0.0"""
     normalizer = Normalizer()
@@ -130,6 +137,7 @@ def run_all_tests():
         test_distance_normalization_miles_only,
         test_distance_normalization_mojibake,
         test_distance_normalization_decimal,
+        test_distance_normalization_stray_leading_number,
         test_distance_normalization_invalid,
         test_jockey_name_normalization,
         test_jockey_name_with_suffix,

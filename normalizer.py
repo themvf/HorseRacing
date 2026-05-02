@@ -117,6 +117,15 @@ class Normalizer:
                     if m:
                         whole = int(m.group(1))
                         return round(whole + frac_val, 2)
+
+            # Pattern 4b: Furlong text with stray leading numbers from PDF
+            # column extraction, e.g. "1 7 Furlongs" -> 7.0.
+            if re.search(r'Furlongs?', raw, re.IGNORECASE):
+                nums = re.findall(r'\d+(?:\.\d+)?', raw)
+                for num in reversed(nums):
+                    val = float(num)
+                    if 3.0 <= val <= 12.0:
+                        return round(val, 2)
             
             # Pattern 5: Decimal furlongs (e.g., "6.5Furlongs" or "6.5f")
             m = re.search(r'(\d+(?:\.\d+)?)\S{0,6}(?:Furlongs?|f\b)', raw, re.IGNORECASE)

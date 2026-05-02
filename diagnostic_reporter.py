@@ -58,9 +58,12 @@ class DiagnosticReporter:
         'jockey_parsed':      (lambda h: h.jockey_win_pct > 0 or h.jockey_name != "", 0.15),
         'speed_parsed':       (lambda h: h.best_speed > 0,                 0.15),
         'form_parsed':        (lambda h: h.starts > 0,                     0.13),
-        'claim_price_parsed': (lambda h: h.claim_price > 0,                0.12),
+        # Claim price is often legitimately absent in non-claiming races. Keep
+        # reporting the fill rate, but do not flag a race solely because this is
+        # missing.
+        'claim_price_parsed': (lambda h: h.claim_price > 0,                0.00),
         'past_races_parsed':  (lambda h: len(h.past_races) > 0,            0.10),
-        'trainer_parsed':     (lambda h: h.trainer_win_pct > 0,            0.06),
+        'trainer_parsed':     (lambda h: h.trainer_win_pct > 0 or h.trainer_name != "", 0.06),
         'style_parsed':       (lambda h: h.style_num > 0,                  0.02),
         'life_parsed':        (lambda h: h.starts > 0,                     0.02),
     }

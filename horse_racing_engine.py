@@ -7,6 +7,8 @@ from any working directory.
 """
 
 import os
+import re
+import json
 import logging
 from pathlib import Path
 
@@ -114,6 +116,78 @@ class HorseRacingEngine(ParserMixin, FeaturesMixin, ReportingMixin):
         if REPORTER_AVAILABLE:
             self.reporter = DiagnosticReporter()
             print("[+] Diagnostic reporter initialized")
+
+        # Meet stats (jockey/trainer win counts updated after results come in)
+        self.meet_stats = self._load_meet_stats()
+
+    # ── Meet stats ────────────────────────────────────────────────────────────
+
+    def _load_meet_stats(self):
+        stats_path = _CONFIG_DIR / "meet_stats.json"
+        if not stats_path.exists():
+            return None
+        try:
+            with open(stats_path, 'r') as f:
+                data = json.load(f)
+            meet = data.get('meet', 'Unknown meet')
+            updated = data.get('last_updated', '?')
+            races = data.get('races_counted', '?')
+            print(f"[+] Meet stats loaded: {meet} — {races} races through {updated}")
+            return data
+        except Exception as e:
+            print(f"[!] Warning: Could not load meet_stats.json: {e}")
+            return None
+
+    @staticmethod
+    def _norm_person(name: str) -> str:
+        """Lowercase + strip non-alpha + strip name suffixes for fuzzy matching."""
+        base = re.sub(r'[^a-z]', '', name.lower())
+        for sfx in ('iii', 'iv', 'jr', 'sr', 'ii'):
+            if base.endswith(sfx):
+                base = base[:-len(sfx)]
+        return base
+
+    def _apply_meet_stats(self):
+        """
+        Replace jockey/trainer win% on every parsed horse with current meet
+        figures from meet_stats.json.  Falls back to the PDF-parsed value when
+        the name is not found in the stats file.
+        """
+        if not self.meet_stats:
+            return
+
+        jockey_lookup = {
+            self._norm_person(name): data
+            for name, data in self.meet_stats.get('jockeys', {}).items()
+        }
+        trainer_lookup = {
+            self._norm_person(name): data
+            for name, data in self.meet_stats.get('trainers', {}).items()
+        }
+
+        updated_j = updated_t = 0
+        for horses in self.all_races.values():
+            for horse in horses:
+                key = self._norm_person(horse.jockey_name)
+                if key in jockey_lookup:
+                    d = jockey_lookup[key]
+                    if d['starts'] > 0:
+                        horse.jockey_win_pct = d['wins'] / d['starts']
+                        updated_j += 1
+
+                key = self._norm_person(horse.trainer_name)
+                if key in trainer_lookup:
+                    d = trainer_lookup[key]
+                    if d['starts'] > 0:
+                        horse.trainer_win_pct = d['wins'] / d['starts']
+                        updated_t += 1
+
+        print(f"[+] Meet stats applied: {updated_j} jockey, {updated_t} trainer records updated")
+
+    def parse_races(self, text):
+        """Parse races then overlay current meet stats on jockey/trainer win %."""
+        super().parse_races(text)
+        self._apply_meet_stats()
 
     def add_results(self, race_num: str, finish_order: list):
         """

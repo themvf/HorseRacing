@@ -43,7 +43,7 @@
     "claim_price": {
       "name": "claim_price",
       "patterns": [
-        "\\$(\\d{1,3}(?:,\\d{3})+|\\d{4,6})"
+        "\\$(\\d{1,3}(?:,\\d{3})+|\\d{4,6})(?!\\s*[kK])"
       ],
       "default_value": 0,
       "pre_filter": "$",
@@ -52,7 +52,7 @@
     "best_speed": {
       "name": "best_speed",
       "patterns": [
-        "Fst\\((\\d+)\\)"
+        "Fst\\((\\d+)[^)]*\\)"
       ],
       "default_value": 0,
       "pre_filter": "Fst",

@@ -24,6 +24,7 @@ TRACK_NAMES = {
     'gp':   'Gulfstream Park',
     'sa':   'Santa Anita',
     'dmr':  'Del Mar',
+    'cdx':  'Churchill Downs',
     'pen':  'Penn National',
     'pid':  'Pimlico',
     'mnr':  'Mountaineer',
@@ -123,8 +124,20 @@ class ParserMixin:
 
     def parse_races(self, text):
         """Parse races from extracted text."""
+        # Churchill/Ultimate PP format: initial race pages put the race
+        # number at the end of the title line, then wagering options below.
+        # Continuation pages keep "Race N E1 E2 / Late SPD" on one line and
+        # are intentionally excluded. Check this first because later summary
+        # sections can contain older-looking "Race N\n# Speed" snippets.
+        race_markers = list(re.finditer(
+            r"^Ultimate PP's[^\n]*Race\s+(\d+)\s*$\n\s*(?:Daily Double|Exacta|Race Daily Double)",
+            text,
+            re.IGNORECASE | re.MULTILINE,
+        ))
+
         # Parx format: "Race N\n# Speed"
-        race_markers = list(re.finditer(r'Race\s+(\d+)\s*\n#\s+Speed', text))
+        if not race_markers:
+            race_markers = list(re.finditer(r'Race\s+(\d+)\s*\n#\s+Speed', text))
 
         if not race_markers:
             # LRL/BRIS format: "Race N" at end of track-header line, followed by
@@ -294,7 +307,7 @@ class ParserMixin:
             if clm_match and pattern_idx >= 0:
                 horse.claim_price = int(clm_match.group(1).replace(',', ''))
         else:
-            clm_match = re.search(r'\$(\d{1,3}(?:,\d{3})+|\d{4,6})', block)
+            clm_match = re.search(r'\$(\d{1,3}(?:,\d{3})+|\d{4,6})(?!\s*[kK])', block)
             if clm_match:
                 horse.claim_price = int(clm_match.group(1).replace(',', ''))
 
@@ -342,7 +355,7 @@ class ParserMixin:
             if speed_match and pattern_idx >= 0:
                 horse.best_speed = int(speed_match.group(1))
         else:
-            speed_match = re.search(r'Fst\((\d+)\)', block)
+            speed_match = re.search(r'Fst\((\d+)[^)]*\)', block)
             if speed_match:
                 horse.best_speed = int(speed_match.group(1))
 
@@ -484,7 +497,7 @@ class ParserMixin:
                         dist_f = raw_dist
                         break
 
-                if e1 > 0 and spd > 0:
+                if 0 < e1 <= 150 and 0 < e2 <= 150 and 0 < spd <= 150:
                     horse.past_races.append({
                         'dist':   dist_f,
                         'e1':     e1,
