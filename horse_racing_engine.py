@@ -140,12 +140,16 @@ class HorseRacingEngine(ParserMixin, FeaturesMixin, ReportingMixin):
 
     @staticmethod
     def _norm_person(name: str) -> str:
-        """Lowercase + strip non-alpha + strip name suffixes for fuzzy matching."""
-        base = re.sub(r'[^a-z]', '', name.lower())
-        for sfx in ('iii', 'iv', 'jr', 'sr', 'ii'):
-            if base.endswith(sfx):
-                base = base[:-len(sfx)]
-        return base
+        """Order-agnostic name normalization for meet-stats matching.
+        Sorts tokens so 'Saez Luis' matches 'Luis Saez' regardless of
+        whether the PDF prints names as Last-First or First-Last.
+        """
+        _SUFFIXES = {'jr', 'sr', 'ii', 'iii', 'iv'}
+        tokens = [
+            t for t in re.sub(r'[^a-z ]', '', name.lower()).split()
+            if t not in _SUFFIXES
+        ]
+        return ''.join(sorted(tokens))
 
     def _apply_meet_stats(self):
         """
